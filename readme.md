@@ -12,7 +12,7 @@ $ pip install django==1.8.5 whitenoise==2.0
 $ django-admin startproject mysiteprogramacaoredes
 ```
 ## Configurando o projeto
-### Em settings.py :
+#### Em settings.py :
 <pre><code> 
     TIME_ZONE = 'America/Sao_Paulo'<br>
     STATIC_URL = '/static/'<br>
@@ -35,31 +35,31 @@ $ python manage.py startapp blog
 </code></pre>
 
 ## Criando um model e colocando no banco de dados
-### Criar model em 'blog/models.py'
-### No terminal rodar as migrations
+#### Criar model em 'blog/models.py'
+#### No terminal rodar as migrations
 ```
 $ python manage.py makemigrations blog
 $ python manage.py migrate blog
 ```
 
 ## Configurando admin
-### Abrir arquivo 'blog/admin.py' e configurar o novo model
-### No terminal criar superuser
+#### Abrir arquivo 'blog/admin.py' e configurar o novo model
+#### No terminal criar superuser
 ```
 $ python manage.py createsuperuser
 ```
 
 ## Configurando as urls
-### Incluir as urls do blog nas urls do site
+#### Incluir as urls do blog nas urls do site
 
 ## Configurar as views
-### Organizar chamadas das urls
+#### Organizar chamadas das urls
 
 ## Primeiros templates (html)
-### Criar a pasta blog/templates/blog para ficar mais organizado
+#### Criar a pasta blog/templates/blog para ficar mais organizado
 
 ## Formulários
-### Criar 'blog/forms.py'
+#### Criar 'blog/forms.py'
 
 ## Rodar a aplicação:
 ```
