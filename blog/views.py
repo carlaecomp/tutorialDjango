@@ -1,17 +1,13 @@
 # Create your views here.
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
-from django.shortcuts import redirect
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
-
-def post_new(request):
-    form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
 
 def post_new(request):
     if request.method == "POST":
@@ -24,4 +20,4 @@ def post_new(request):
             return redirect('post_list')
     else:
         form = PostForm()
-    return render(request, 'blog/post_edit.html', {'form': form})
+        return render(request, 'blog/post_edit.html', {'form': form})
